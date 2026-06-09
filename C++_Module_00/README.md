@@ -20,9 +20,6 @@ A warm-up application focusing on standard output streams and string modificatio
 ### [ex01] My Awesome PhoneBook
 A complete contact management system holding up to 8 entries with a circular overwrite behavior. Features clean column formatting via `<iomanip>` and handles input validation cleanly without dynamic allocation.
 
-### [ex02] The Job Of Your Dreams *(Optional)*
-A code reconstruction exercise practicing reverse-engineering. Rebuilds a missing account handling class using only a legacy header and matching dynamic execution logs.
-
 ---
 
 ## 🚀 Compilation & Usage
