@@ -7,11 +7,7 @@
 // intentional blank body if no further initialization setup is required
 
 Zombie::Zombie(std::string name) : _name(name) {
-
 }
-
-
-
 
 // 2. Desctructor' Automatically invoked upon object desctruction
 // It must print a message sidplaying the zombie's name
