@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:52:26 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 22:10:42 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/13 22:40:39 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,27 +68,25 @@ int main(int ac, char **av) {
 	return 0;
 }
 
-
-
 /*
+// All the methods needed for this exercise
 
-// All the methods needed for this excercise
 std::string line = "Hello Bob";
 
-// Найти подстроку — возвращает позицию или npos
+// Find substring - returns position of first char or npos (max size_t value) if not found
 line.find("Bob")          // → 6
 
-// Вырезать кусок строки
-line.substr(0, 6)         // → "Hello " (с позиции 0, длиной 6)
-line.substr(6)            // → "Bob" (с позиции 6 до конца)
+// Extract a piece of string
+line.substr(0, 6)         // → "Hello " (from position 0, length 6)
+line.substr(6)            // → "Bob" (from position 6 to end)
 
-// Длина строки
+// String length
 line.length()             // → 9
 
-// Пустая ли строка
+// Check if string is empty
 line.empty()              // → false
 
-// Склейка — через оператор +
+// Concatenation — via operator +
 "Hello " + "Alice"        // → "Hello Alice"
 
 */
