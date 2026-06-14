@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:50:39 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:50:41 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/14 19:50:06 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
