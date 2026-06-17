@@ -6,13 +6,14 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 21:29:57 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/17 04:54:30 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 11:22:41 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
-#include <string>
 
 class Fixed {
  private:
@@ -30,7 +31,7 @@ class Fixed {
 
 };
 
-
+#endif
 /* 
 
 	Useful info:
