@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:50:58 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:50:59 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:54:24 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include "Zombie.hpp" // gives us access to the Zombie class and functions
 
-int main(void)
+int main()
 {
 	// Allocating a zombie object on the heap
 	Zombie *heapZombie = newZombie("The Heap Zombie");

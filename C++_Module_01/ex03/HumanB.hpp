@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:52:10 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:52:11 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:55:13 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class HumanB {
 		~HumanB(void);
 
 		void setWeapon(Weapon& weapon);
-		void attack(void);
+		void attack();
 };
 
 #endif

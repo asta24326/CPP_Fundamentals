@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:51:33 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:51:33 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:54:38 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Zombie* zombieHorde(int N, std::string name);
 
-int main(void) {
+int main() {
 	Zombie* myHorde = zombieHorde(5, "I'm Zombie");
 
 	for(int i = 0; i < 5; i++) {

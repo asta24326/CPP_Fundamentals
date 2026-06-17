@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 22:13:54 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 22:40:42 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:55:53 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 
 class Harl {
 	private:
-		void debug(void) const;
-		void info(void) const;
-		void warning(void) const;
-		void error(void) const;
+		void debug() const;
+		void info() const;
+		void warning() const;
+		void error() const;
 
 	public:
-		Harl(void);
+		Harl();
 		~Harl(void);
 		void complain(std::string level);	
 };

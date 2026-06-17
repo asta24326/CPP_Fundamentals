@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:50:39 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/14 19:50:06 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:53:44 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string>
 #include "PhoneBook.hpp"
 
-int main(void) {
+int main() {
 	PhoneBook		book; // initializing on stack
 	std::string		command;
 

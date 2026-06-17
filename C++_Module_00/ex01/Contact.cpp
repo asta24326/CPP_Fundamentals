@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:50:19 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:50:21 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:53:40 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Contact.hpp"
 
 // Constructor
-Contact::Contact(void) {
+Contact::Contact() {
 	_firstName = "";
 	_lastName = "";
 	_nickname = "";
@@ -23,7 +23,7 @@ Contact::Contact(void) {
 }
 
 // Desctructor
-Contact::~Contact(void) {
+Contact::~Contact() {
 	// no dynamic memory allocated, that's why no clean up needed
 }
 
@@ -42,22 +42,22 @@ void Contact::setInfo(
 
 // Public Getter function
 // The 'const' suffix matches our header declarations and read-only access
-std::string Contact::getFirstName(void) const {
+std::string Contact::getFirstName() const {
 	return _firstName;
 }
 
-std::string Contact::getLastName(void) const {
+std::string Contact::getLastName() const {
 	return _lastName;
 }
 
-std::string Contact::getNickname(void) const {
+std::string Contact::getNickname() const {
 	return _nickname;
 }
 
-std::string Contact::getPhoneNumber(void) const {
+std::string Contact::getPhoneNumber() const {
 	return _phoneNumber;
 }
 
-std::string Contact::getDarkestSecret(void) const {
+std::string Contact::getDarkestSecret() const {
 	return _darkestSecret;
 }

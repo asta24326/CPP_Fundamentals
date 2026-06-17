@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:52:00 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:52:03 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:55:06 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class HumanA {
 		HumanA(const std::string& name, Weapon& weapon);
 		~HumanA(void);
 
-		void attack(void);
+		void attack();
 };
 
 #endif

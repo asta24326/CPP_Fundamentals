@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:50:48 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/14 20:46:17 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:54:20 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 #include "PhoneBook.hpp"
 
 // Constructor
-PhoneBook::PhoneBook(void) {
+PhoneBook::PhoneBook() {
 	_contactCount = 0;
 }
 
 //Destructor
-PhoneBook::~PhoneBook(void) {
+PhoneBook::~PhoneBook() {
 	// empty because of stack allocation
 }
 
@@ -36,7 +36,7 @@ std::string formatColumn(std::string str) {
 }
 
 // Main ADD contact logic
-void PhoneBook::addContact(void) {
+void PhoneBook::addContact() {
 	std::string first, last, nick, phone, secret;
 
 	std::cout << "\n---> Adding a New Contact" << std::endl;
@@ -116,7 +116,7 @@ void PhoneBook::addContact(void) {
 	std::cout << "Contact sucessfully saved at slot [" << (targetIndex + 1) << "]!\n";
 }
 
-void PhoneBook::searchContact(void) const {
+void PhoneBook::searchContact() const {
 
 	// 0. Determine how many slots are actually filled with contacts (max is 8)
 	int limit = (_contactCount > 8) ? 8 : _contactCount;

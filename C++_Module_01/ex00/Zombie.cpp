@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 20:51:14 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/06/13 20:51:20 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/06/17 10:54:34 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ Zombie::Zombie(std::string name) : _name(name) {
 // 2. Desctructor' Automatically invoked upon object desctruction
 // It must print a message sidplaying the zombie's name
 
-Zombie::~Zombie(void) {
+Zombie::~Zombie() {
 	std::cout << this->_name << ": has been utterly destroyed." << std::endl;
 }
 
 // 3. The Announce Member function: outputs the required dialogue to standard output
 // by subject name is is "BraiiiiiiiinnnzzzZ..." << std::endl;
 
-void Zombie::announce(void) {
+void Zombie::announce() {
 	std::cout << this->_name << ": BraiiiiiiiinnnzzzZ..." << std::endl;
 }
