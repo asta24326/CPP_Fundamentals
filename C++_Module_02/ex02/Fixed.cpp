@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   Fixed02.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:46:11 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/07/23 23:16:19 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/07/24 19:58:15 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,29 @@ Fixed Fixed::operator*(const Fixed& other) const {
 	result.setRawBits((this->_rawBits * other._rawBits) >> _fractionalBits);
 	return result;
 }
+		// Example: Fixed(5) * Fixed(2) = Fixed(10)
+		// this->_rawBits = 5 * 256 = 1280
+		// other._rawBits = 2 * 256 = 512
+		// 1280 * 512 = 655360
+		// 655360 >> 8 (dividing by 256) = 2560
+		// 2560 / 256 = 10 ✓
+
 
 Fixed Fixed::operator/(const Fixed& other) const {
 	Fixed result;
 	result.setRawBits((this->_rawBits << 8) / other._rawBits);
 	return result;
 }
+		// Example: Fixed(10) / Fixed(2) = Fixed(5)
+		// this->_rawBits = 10 * 256 = 2560
+		// other._rawBits = 2 * 256 = 512
+		//
+		// if 2560/512 = 5(in raw bits) X
+		//
+		// 2560 << 8 (multiply by 256) = 655360
+		// 655360 / 512 = 1280 (rawBits)
+		// 1280 / 256 = 5 ✓
+
 
 //////////
 // Operators - increments
@@ -122,7 +139,7 @@ Fixed& Fixed::operator--(){
 }
 
 Fixed Fixed::operator++(int) {
-	Fixed temp = *this;
+	Fixed temp = *this; // creating a temporary object on stack memory
 
 	this->_rawBits++;
 	return temp;
