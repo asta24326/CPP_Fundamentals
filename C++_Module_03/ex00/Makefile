@@ -5,33 +5,37 @@ NAME = ClapTrap
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-# 3. Source and Object files
-SRC = main.cpp ClapTrap.cpp
-OBJ = $(SRC:.cpp=.o)
+# 3. Object directory
+OBJ_DIR = temp
 
-# 4. Header Dependencies (Triggers a rebuild oif the header changes)
+# 4. Source and Object files
+SRC = main.cpp ClapTrap.cpp
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
+
+# 5. Header Dependencies
 HEADERS = ClapTrap.hpp
 
-# 5. Default Target Rule
+# 6. Default Target Rule
 all: $(NAME)
 
-# 6. Linking Rule (compiles the final binary executable)
+# 7. Linking Rule
 $(NAME): $(OBJ)
-		$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
-# 7. Compilation Rule (Compiles individual .cpp files into .o obkect files)
-%.o: %.cpp $(HEADERS)
-		$(CXX) $(CXXFLAGS) -c $< -o $@
+# 8. Compilation Rule (creates temp dir if it doesn't exist)
+$(OBJ_DIR)/%.o: %.cpp $(HEADERS)
+	@mkdir -p $(OBJ_DIR)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# 8. Clean Rules
+# 9. Clean Rules
 clean:
-		rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
-		rm -f $(NAME)
-		
-# 9. Rebuild Rule
+	rm -f $(NAME)
+
+# 10. Rebuild Rule
 re: fclean all
 
-# 10. Phony Targets (Prevents conflicts with files named clean/fclean/re)
+# 11. Phony Targets
 .PHONY: all clean fclean re
