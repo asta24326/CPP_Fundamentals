@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 20:57:53 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/07/30 18:42:45 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/07/31 20:19:20 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,16 @@ Brain& Brain::operator=(const Brain& other) {
 // Desctructor
 Brain::~Brain() {
 	std::cout << "Brain destructor for " << "[" << this << "]" << " called!" << std::endl;
+}
+
+// Setter
+void Brain::setIdea(int idx, std::string idea) {
+	this->ideas[idx] = idea;
+	std::cout << "Brain setter - succesfully!" << std::endl;
+}
+
+// Getter
+std::string Brain::getIdea(int idx) const {
+	std::cout << "Brain getter returned - succesfully!" << std::endl;
+	return this->ideas[idx];
 }
