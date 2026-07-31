@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 20:57:53 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/07/30 18:54:49 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/07/31 20:45:39 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,8 @@ Dog::~Dog() {
 
 void Dog::makeSound() const {
 	std::cout << "Woof! Woof!" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return this->_brain;
 }

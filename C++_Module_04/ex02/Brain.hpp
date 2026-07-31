@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 20:57:53 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/07/30 19:01:08 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/07/31 20:11:33 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,20 @@
 #include <string>
 
 class Brain {
+	private:
+		std::string ideas[100];
+
 	public:
 		Brain();
 		Brain(const Brain& other);
 		Brain& operator=(const Brain& other);
 		~Brain();
 
-		std::string ideas[100];
+		// Setter
+		void setIdea(int idx, std::string idea);
+
+		// Getter
+		std::string getIdea(int idx) const;
 };
 
 #endif

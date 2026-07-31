@@ -6,7 +6,7 @@
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 20:57:53 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/07/30 19:01:05 by aidarsharaf      ###   ########.fr       */
+/*   Updated: 2026/07/31 20:44:00 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 
 class Dog : public Animal {
 	
+	private:
+		Brain* _brain;
+
 	protected:
 		std::string type;
 
@@ -30,9 +33,8 @@ class Dog : public Animal {
 		Dog& operator=(const Dog& other);
 		virtual ~Dog();
 
-		Brain* _brain;
-
 		void makeSound() const;
+		Brain* getBrain() const;
 };
 
 #endif

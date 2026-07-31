@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aidarsharafeev <aidarsharafeev@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/31 10:09:40 by aidarsharaf       #+#    #+#             */
-/*   Updated: 2026/07/31 10:10:58 by aidarsharaf      ###   ########.fr       */
+/*   Created: 2026/07/31 20:42:03 by aidarsharaf       #+#    #+#             */
+/*   Updated: 2026/07/31 20:46:33 by aidarsharaf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,37 +43,37 @@ int main() {
 	std::cout << "\n--- Test 4: DEEP COPY TEST ---" << std::endl;
 	
 	Dog originalDog;
-	originalDog._brain->ideas[0] = "Original: Chase ball";
-	originalDog._brain->ideas[1] = "Original: Eat food";
+	originalDog.getBrain()->setIdea(0, "Original: Chase ball");
+	originalDog.getBrain()->setIdea(1, "Original: Eat food");
 	
 	std::cout << "Original Dog ideas:" << std::endl;
-	std::cout << "  ideas[0]: " << originalDog._brain->ideas[0] << std::endl;
-	std::cout << "  ideas[1]: " << originalDog._brain->ideas[1] << std::endl;
-	std::cout << "  Brain address: " << originalDog._brain << std::endl;
+	std::cout << "  ideas[0]: " << originalDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "  ideas[1]: " << originalDog.getBrain()->getIdea(1) << std::endl;
+	std::cout << "  Brain address: " << originalDog.getBrain() << std::endl;
 	
 	// Copy constructor
 	Dog copyDog = originalDog;
 	
 	std::cout << "\nCopy Dog ideas (before modification):" << std::endl;
-	std::cout << "  ideas[0]: " << copyDog._brain->ideas[0] << std::endl;
-	std::cout << "  ideas[1]: " << copyDog._brain->ideas[1] << std::endl;
-	std::cout << "  Brain address: " << copyDog._brain << std::endl;
+	std::cout << "  ideas[0]: " << copyDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "  ideas[1]: " << copyDog.getBrain()->getIdea(1) << std::endl;
+	std::cout << "  Brain address: " << copyDog.getBrain() << std::endl;
 	
 	// Modify the COPY
-	copyDog._brain->ideas[0] = "CHANGED: Different idea";
-	copyDog._brain->ideas[1] = "CHANGED: Another idea";
+	copyDog.getBrain()->setIdea(0, "CHANGED: Different idea");
+	copyDog.getBrain()->setIdea(1, "CHANGED: Another idea");
 	
 	std::cout << "\nAfter modifying COPY (original should NOT change):" << std::endl;
 	std::cout << "Original ideas:" << std::endl;
-	std::cout << "  ideas[0]: " << originalDog._brain->ideas[0] << std::endl;
-	std::cout << "  ideas[1]: " << originalDog._brain->ideas[1] << std::endl;
+	std::cout << "  ideas[0]: " << originalDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "  ideas[1]: " << originalDog.getBrain()->getIdea(1) << std::endl;
 	
 	std::cout << "Copy ideas:" << std::endl;
-	std::cout << "  ideas[0]: " << copyDog._brain->ideas[0] << std::endl;
-	std::cout << "  ideas[1]: " << copyDog._brain->ideas[1] << std::endl;
+	std::cout << "  ideas[0]: " << copyDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "  ideas[1]: " << copyDog.getBrain()->getIdea(1) << std::endl;
 	
 	// Check if deep copy worked
-	if (originalDog._brain->ideas[0] != copyDog._brain->ideas[0]) {
+	if (originalDog.getBrain()->getIdea(0) != copyDog.getBrain()->getIdea(0)) {
 		std::cout << "\n✓ DEEP COPY WORKS! (Original and Copy have different Brain objects)" << std::endl;
 	} else {
 		std::cout << "\n❌ SHALLOW COPY! (Original and Copy share same Brain - BAD!)" << std::endl;
